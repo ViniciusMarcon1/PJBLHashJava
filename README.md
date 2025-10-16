@@ -111,6 +111,11 @@ src/
 #### /hash
 
 - MixHash:
-- MultiplicationHash:
-- DoubleHashStepMix:
+  - Implementa uma função de dispersão baseada em bit mixing, inspirada nos finalizadores do MurmurHash/xxHash.
+	- Realiza uma sequência de operações de XOR, shift e multiplicações por constantes grandes para espalhar os bits da chave inteira e retorna um valor no intervalo [0, m - 1].
 
+- MultiplicationHash:
+  - Implementa o método da multiplicação proposto por Donald Knuth, utilizando uma constante irracional (A = (√5 - 1)/2) para multiplicar pela chave, extrair a parte fracionária do resultado e multiplicar por m, gerando o índice.
+  
+- DoubleHashStepMix:
+  - Variação da MixHash usada exclusivamente como função de passo (step) no rehashing duplo, garantindo que o valor retornado esteja sempre no intervalo [1, m - 1], evitando passo zero. Quando m é primo, assegura que o passo seja coprimo de m, garantindo que toda a tabela possa ser percorrida. 
