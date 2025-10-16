@@ -2,12 +2,6 @@ package structure;
 
 import model.Registro;
 
-/**
- * Tabela hash com endereçamento aberto (double hashing) e resize automático.
- * - Armazena diretamente os Registros em um vetor de slots (sem listas).
- * - Cresce quando load factor ultrapassa o limiar (ex.: 0.75).
- * - Contabiliza "colisões" como slots ocupados sondados antes de inserir.
- */
 public class HashTableRehash {
 
     private Registro[] table;
