@@ -4,7 +4,7 @@ Grupo: Eduardo Theodoro | Felipe Maestri | Gustavo Muniz | Vinicius Marcon
 
 ## Objetivo
 
-Implementar e analisar o desempenho de diferentes funções Hash usando Java. Rodar 3 funções Hash, com 3 diferentes tamanhos de vetores com 3 conjuntos de dados gerados aleatoriamente.
+Implementar e analisar o desempenho de diferentes funções Hash usando Java. Rodar 3 funções Hash, com 3 diferentes tamanhos de vetores com 3 conjuntos de dados gerados aleatoriamente. (O relatório com as análises e gráficos está em RELATORIO.md)
 
 ## Escolhas e Justificativas
 
