@@ -3,7 +3,7 @@ package structure;
 import model.Registro;
 
 public class HashTable {
-    LinkedList[] table;         // vetor de listas encadeadas (cada bucket guarda Registro)
+    LinkedList[] table; 
     int size;
     long total_collisions = 0;
     HashFunction hashFunction;
@@ -20,11 +20,12 @@ public class HashTable {
 
     // Insere um Registro na tabela e soma as colisões do bucket
     public void insert(Registro reg) {
-        int key = reg.getCodigo();                    // hash é calculado a partir do código
+        int key = reg.getCodigo();// hash é calculado a partir do código
         int index = hashFunction.hash(key, size);
         if (index < 0) index += size;
 
-        if (table[index] == null) {   // cria a O bucket se tiver elementos nesse index
+        if (table[index] == null) {   
+            // cria a O bucket se tiver elementos nesse index
             table[index] = new LinkedList();
         }
         total_collisions += table[index].insertAndCount(reg); // conta nós visitados no bucket
